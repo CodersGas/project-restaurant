@@ -27,7 +27,6 @@ nav ul li img {
 }
 nav ul li:hover {
   transform: scale(1.3, 1.3);
-  color: #0e58b9;
   font-weight: 800;
   transition-duration: 0.5s;
   text-shadow: none;
