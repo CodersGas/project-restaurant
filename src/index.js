@@ -4,7 +4,7 @@ const boadyTag = document.querySelector("body");
 
 const logo = document.createElement("li");
 const img = document.createElement("img");
-img.setAttribute("src", "assets/food.svg");
+img.setAttribute("src", "assets/food.jpg");
 logo.appendChild(img);
 
 const about = document.createElement("li");
