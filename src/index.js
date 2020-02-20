@@ -79,7 +79,7 @@ vegSection1.classList.add("col-md-4");
 const section1Div = document.createElement("div");
 section1Div.classList.add("img-wrapper");
 const imgWrapperImg1 = document.createElement("img");
-imgWrapperImg1.setAttribute("src", "assets/rajma-chawal.svg");
+imgWrapperImg1.setAttribute("src", "assets/rajma-chawal.jpg");
 
 section1Div.appendChild(imgWrapperImg1);
 vegSection1.appendChild(section1Div);
@@ -116,7 +116,7 @@ vegSection2.classList.add("col-md-4");
 const section2Div = document.createElement("div");
 section2Div.classList.add("img-wrapper");
 const imgWrapperImg2 = document.createElement("img");
-imgWrapperImg2.setAttribute("src", "assets/shahi-paneer.svg");
+imgWrapperImg2.setAttribute("src", "assets/shahi-paneer.jpg");
 
 section2Div.appendChild(imgWrapperImg2);
 vegSection2.appendChild(section2Div);
@@ -153,7 +153,7 @@ vegSection3.classList.add("col-md-4");
 const section3Div = document.createElement("div");
 section3Div.classList.add("img-wrapper");
 const imgWrapperImg3 = document.createElement("img");
-imgWrapperImg3.setAttribute("src", "assets/chhole-bhature.svg");
+imgWrapperImg3.setAttribute("src", "assets/chhole-bhature.jpg");
 
 section3Div.appendChild(imgWrapperImg3);
 vegSection3.appendChild(section3Div);
@@ -218,7 +218,7 @@ nonvegSection1.classList.add("col-md-4");
 const nonvegsection1Div = document.createElement("div");
 nonvegsection1Div.classList.add("img-wrapper");
 const nonvegimgWrapperImg1 = document.createElement("img");
-nonvegimgWrapperImg1.setAttribute("src", "assets/mutton-korma.svg");
+nonvegimgWrapperImg1.setAttribute("src", "assets/mutton-korma.jpg");
 
 nonvegsection1Div.appendChild(nonvegimgWrapperImg1);
 nonvegSection1.appendChild(nonvegsection1Div);
@@ -255,7 +255,7 @@ nonvegSection2.classList.add("col-md-4");
 const nonvegsection2Div = document.createElement("div");
 nonvegsection2Div.classList.add("img-wrapper");
 const nonvegimgWrapperImg2 = document.createElement("img");
-nonvegimgWrapperImg2.setAttribute("src", "assets/biryani.svg");
+nonvegimgWrapperImg2.setAttribute("src", "assets/biryani.jpg");
 
 nonvegsection2Div.appendChild(nonvegimgWrapperImg2);
 nonvegSection2.appendChild(nonvegsection2Div);
@@ -292,7 +292,7 @@ nonvegSection3.classList.add("col-md-4");
 const nonvegsection3Div = document.createElement("div");
 nonvegsection3Div.classList.add("img-wrapper");
 const nonvegimgWrapperImg3 = document.createElement("img");
-nonvegimgWrapperImg3.setAttribute("src", "assets/chicken65.svg");
+nonvegimgWrapperImg3.setAttribute("src", "assets/chicken65.jpg");
 
 nonvegsection3Div.appendChild(nonvegimgWrapperImg3);
 nonvegSection3.appendChild(nonvegsection3Div);
