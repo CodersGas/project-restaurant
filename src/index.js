@@ -1,4 +1,4 @@
-const boadyTag = document.querySelector("body");
+const bodyTag = document.querySelector("body");
 
 /***********CREATING NAVIGATION BAR******************/
 
@@ -10,6 +10,24 @@ logo.appendChild(img);
 const about = document.createElement("li");
 about.innerHTML = "about";
 
+about.addEventListener("click", () =>{
+    if(aboutContainer.style.display === "none"){
+        aboutContainer.style.display = "block";
+        contactContainer.style.display = "none";
+        veg_h2.style.display = "none";
+        nonveg_h2.style.display = "none";
+        dessert_h2.style.display = "none";
+        vegRow.style.display = "none";
+        nonvegRow.style.display = "none";
+        dessertRow.style.display = "none";
+
+
+    }
+    else{
+        aboutContainer.style.display = "none";
+    }
+});
+
 const menu = document.createElement("li");
 menu.innerHTML = "menu";
 
@@ -18,8 +36,12 @@ menu.addEventListener("click", () =>{
         veg_h2.style.display = "block";
         nonveg_h2.style.display = "block";
         dessert_h2.style.display = "block";
+        aboutContainer.style.display = "none";
+        contactContainer.style.display = "none";
     }
     else{
+        aboutContainer.style.display = "block";
+
         veg_h2.style.display = "none";
         nonveg_h2.style.display = "none";
         
@@ -36,6 +58,23 @@ menu.addEventListener("click", () =>{
 const contact = document.createElement("li");
 contact.innerHTML = "contact";
 
+contact.addEventListener("click", () =>{
+    if(contactContainer.style.display === "none"){
+        contactContainer.style.display = "block";
+        aboutContainer.style.display = "none";
+        veg_h2.style.display = "none";
+        nonveg_h2.style.display = "none";
+        dessert_h2.style.display = "none";
+        vegRow.style.display = "none";
+        nonvegRow.style.display = "none";
+        dessertRow.style.display = "none";
+
+    }
+    else{
+        contactContainer.style.display = "none";
+    }
+});
+
 const ul = document.createElement("ul");
 ul.classList.add("d-flex");
 ul.classList.add("justify-content-around");
@@ -48,7 +87,7 @@ ul.appendChild(contact);
 const nav = document.createElement("nav");
 nav.appendChild(ul);
 
-boadyTag.appendChild(nav);
+bodyTag.appendChild(nav);
 
 /*******************CREATING FOOD MENU*******************/
 
@@ -189,7 +228,7 @@ vegSection3.appendChild(section3Btn);
 
 vegRow.appendChild(vegSection3);
 
-boadyTag.appendChild(foodMenuContainer);
+bodyTag.appendChild(foodMenuContainer);
 
 /*************************************************NON VEGETARIAN MENU**************************************************/
 const nonVegContainer = document.createElement("div");
@@ -328,7 +367,7 @@ nonvegSection3.appendChild(nonvegsection3Btn);
 
 nonvegRow.appendChild(nonvegSection3);
 
-boadyTag.appendChild(nonVegContainer);
+bodyTag.appendChild(nonVegContainer);
 
 /******************************DESSERT SECTION*************************/
 const dessertContainer = document.createElement("div");
@@ -466,9 +505,9 @@ dessertsection3Btn.appendChild(dessertsection3BtnSpan);
 dessertSection3.appendChild(dessertsection3Btn);
 
 dessertRow.appendChild(dessertSection3);
-boadyTag.appendChild(dessertContainer);
+bodyTag.appendChild(dessertContainer);
 
-/**********************************CONTACT FORM**********************************/
+/**********************************ORDER FORM**********************************/
 const formContainer = document.createElement("div");
 formContainer.classList.add("form-container");
 formContainer.classList.add("container");
@@ -557,7 +596,7 @@ btnDiv.appendChild(noBtn);
 
 mainForm.appendChild(btnDiv);
 
-boadyTag.appendChild(formContainer);
+bodyTag.appendChild(formContainer);
 
 
 /***********functionality for opening order form on clicking place order*************/
@@ -578,3 +617,92 @@ document.querySelectorAll("button").forEach(button =>{
         });
     }
 });
+
+/**************************ABOUT SECTION**********************/
+const aboutContainer = document.createElement("div");
+aboutContainer.classList.add("about-section");
+aboutContainer.classList.add("container");
+aboutContainer.style.display = "none";
+
+const aboutRow = document.createElement("div");
+aboutRow.classList.add("row");
+aboutContainer.appendChild(aboutRow);
+
+const aboutSection = document.createElement("section");
+aboutSection.classList.add("col-md-12");
+
+const aboutH1 = document.createElement("h1");
+aboutH1.innerHTML = "welcome to our restaurant";
+aboutSection.appendChild(aboutH1);
+
+const aboutP = document.createElement("p");
+aboutP.innerHTML = "Taste flavours and varities of food from all over the india here and experience India in a whole new way";
+
+const aboutArrow = document.createElement("span");
+aboutArrow.classList.add("arrow");
+aboutArrow.innerHTML = "&#8594;";
+aboutP.appendChild(aboutArrow);
+
+aboutSection.appendChild(aboutP);
+
+aboutRow.appendChild(aboutSection);
+aboutContainer.appendChild(aboutRow);
+bodyTag.appendChild(aboutContainer);
+
+/*************************CONTACT FORM***************************/
+const contactContainer = document.createElement("div");
+contactContainer.classList.add("contact-form");
+contactContainer.classList.add("container");
+
+const contactH3 = document.createElement("h3");
+contactH3.innerHTML = "from parties to functions, we arrange for everything. ring a bell, message or visit us and give us a chance to showcase our hospitality."
+contactContainer.appendChild(contactH3);
+
+const contactRow = document.createElement("div");
+contactRow.classList.add("row");
+contactContainer.appendChild(contactRow);
+
+const contactForm = document.createElement("form");
+contactForm.classList.add("col-md-6");
+
+const contactEmail = document.createElement("h5");
+contactEmail.innerHTML = "email  &#128231;";
+contactForm.appendChild(contactEmail);
+const emailIpt = document.createElement("input");
+emailIpt.setAttribute("type", "text");
+emailIpt.setAttribute("value", "restaurant@gmail.com");
+emailIpt.classList.add("contact-email");
+contactForm.appendChild(emailIpt);
+
+const contactPhone = document.createElement("h5");
+contactPhone.innerHTML = "phone number &#x1f514;";
+contactForm.appendChild(contactPhone);
+const phoneIpt1 = document.createElement("input");
+phoneIpt1.classList.add("contact-phone1");
+phoneIpt1.setAttribute("type", "tel");
+phoneIpt1.setAttribute("value", "+91-123456759");
+contactForm.appendChild(phoneIpt1);
+const phoneIpt2 = document.createElement("input");
+phoneIpt2.classList.add("contact-phone2");
+phoneIpt2.setAttribute("type", "tel");
+phoneIpt2.setAttribute("value", "+91-148541759");
+contactForm.appendChild(phoneIpt2);
+
+const visitAdd = document.createElement("h5");
+visitAdd.innerHTML = "visiting address";
+contactForm.appendChild(visitAdd);
+const addIpt = document.createElement("input");
+addIpt.classList.add("contact-address")
+addIpt.setAttribute("type", "text");
+addIpt.setAttribute("value", "some address");
+contactForm.appendChild(addIpt);
+
+contactRow.appendChild(contactForm);
+contactContainer.appendChild(contactRow);
+bodyTag.appendChild(contactContainer);
+
+
+document.querySelector(".contact-email").readOnly = true;
+document.querySelector(".contact-phone1").readOnly = true;
+document.querySelector(".contact-phone2").readOnly = true;
+document.querySelector(".contact-address").readOnly = true;

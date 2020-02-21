@@ -1,10 +1,22 @@
+html,body{
+    min-height: 100%;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("./about-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 /****Navigation styling****/
 nav{ 
-    background-image: url("./food3.jpg");
+    //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
+    border: none;
 
     
     ul {
@@ -17,8 +29,8 @@ nav{
             font-size: 22px;
             font-family: 'Acme', cursive;
             font-weight: bold;
-            text-shadow: 3px 3px 5px #fff;
-            color: black;
+            text-shadow: 3px 3px 5px #aaa;
+            color: #fff;
             padding: 5px;
             user-select: none;
 
@@ -54,6 +66,7 @@ nav{
         cursor: pointer;
         user-select: none;
         padding: 5px 20px;
+        background-color: rgba(205, 205, 241, 0.3)
     }
 
     h2:hover{
@@ -69,7 +82,7 @@ nav{
             position: relative;
             max-width: 350px;
             border-radius: 8px;
-            background-color: rgba(205, 205, 241, 0.3);
+            background-color: rgba(205, 205, 241, 0.6);
             margin: 0 10px 20px 10px;
             height: 100%;
 
@@ -183,6 +196,80 @@ nav{
                     margin: 10px 0;
                     outline: 0;
                 }
+            }
+        }
+    }
+}
+
+/************ABOUT SECTION STYLING*****************/
+.about-section{
+    .row{
+        section{
+            padding: 200px 0;
+            margin: 0 10px;
+            h1{
+                color: white;
+                text-transform: capitalize;
+                font-weight: 800;
+                font-size: 45px;
+                font-family: 'Dancing Script',;
+            }
+
+            p{
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 16px;
+                font-weight: 600;
+
+                .arrow{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #fff;
+                    cursor: pointer;
+                    padding-left:8px;
+                }
+            }
+        }
+    }
+}
+
+/*********************contact form*******************/
+.contact-form{
+    padding: 80px 0;
+    h3{
+        color: #fff;
+        font-family:  'Kanit',;
+        font-size: 35px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        form{
+            border: 3px solid #000;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 0 10px;
+
+            h5{
+                color: #fff;
+                text-transform: capitalize;
+                margin: 10px 0;
+                font-weight: bold;
+                font-family: 'Dancing Script',;
+                font-size: 26px;
+            }
+
+            input{
+                margin: 0 10px;
+                opacity: 0.7;
+                font-weight: bold;
+                color: #000;
+            }
+
+            .contact-address{
+                text-transform: capitalize;
             }
         }
     }
