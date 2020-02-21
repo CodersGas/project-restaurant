@@ -523,6 +523,7 @@ const dishName = document.createElement("h5");
 dishName.innerHTML = "dish name";
 const dishInput = document.createElement("input");
 dishInput.style.textTransform = "capitalize";
+dishInput.classList.add("dishName");
 mainForm.appendChild(dishName);
 mainForm.appendChild(dishInput);
 
@@ -567,7 +568,8 @@ document.querySelectorAll("button").forEach(button =>{
         button.addEventListener("click", () => {
             if(formCont.style.display === "none"){
                 formCont.style.display = "block";
-                dishInput.innerHTML = button.parentElement.querySelector("h5").innerHTML;
+                dishInput.value = button.parentElement.querySelector("h5").innerHTML;
+                document.querySelector(".dishName").readOnly = true;
                 button.parentElement.appendChild(formCont);
             }
             else{
