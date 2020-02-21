@@ -34,11 +34,14 @@ nav ul li:hover {
 
 /*****Food-Menu Styling******/
 .food-menu,
-.non-veg-menu {
+.non-veg-menu,
+.dessert-menu {
   margin: 20px 0;
 }
 .food-menu h2,
-.non-veg-menu h2 {
+.non-veg-menu h2,
+.dessert-menu h2 {
+  display: block;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 30px;
@@ -46,19 +49,23 @@ nav ul li:hover {
   font-family: "Acme", cursive;
   cursor: pointer;
   user-select: none;
+  padding: 5px 20px;
 }
 .food-menu h2:hover,
-.non-veg-menu h2:hover {
+.non-veg-menu h2:hover,
+.dessert-menu h2:hover {
   background-color: lightblue;
   transition-duration: 1s;
 }
 .food-menu .row,
-.non-veg-menu .row {
+.non-veg-menu .row,
+.dessert-menu .row {
   display: flex;
   align-items: baseline;
 }
 .food-menu .row section,
-.non-veg-menu .row section {
+.non-veg-menu .row section,
+.dessert-menu .row section {
   position: relative;
   max-width: 350px;
   border-radius: 8px;
@@ -67,47 +74,115 @@ nav ul li:hover {
   height: 100%;
 }
 .food-menu .row section .img-wrapper,
-.non-veg-menu .row section .img-wrapper {
+.non-veg-menu .row section .img-wrapper,
+.dessert-menu .row section .img-wrapper {
   margin-top: 10px;
 }
 .food-menu .row section .img-wrapper img,
-.non-veg-menu .row section .img-wrapper img {
+.non-veg-menu .row section .img-wrapper img,
+.dessert-menu .row section .img-wrapper img {
   width: 100%;
 }
 .food-menu .row section h5,
-.non-veg-menu .row section h5 {
+.non-veg-menu .row section h5,
+.dessert-menu .row section h5 {
   text-align: center;
   font-weight: bold;
   margin-top: 5px;
   text-transform: capitalize;
 }
 .food-menu .row section .description,
-.non-veg-menu .row section .description {
+.non-veg-menu .row section .description,
+.dessert-menu .row section .description {
   text-align: center;
 }
 .food-menu .row section button,
-.non-veg-menu .row section button {
+.non-veg-menu .row section button,
+.dessert-menu .row section button {
   text-transform: capitalize;
   width: 100%;
   font-size: 18px;
   margin-bottom: 10px;
 }
 .food-menu .row section button .price,
-.non-veg-menu .row section button .price {
+.non-veg-menu .row section button .price,
+.dessert-menu .row section button .price {
   padding-left: 10px;
 }
 @media only screen and (max-width: 768px) {
   .food-menu .row section,
-.non-veg-menu .row section {
+.non-veg-menu .row section,
+.dessert-menu .row section {
     flex-direction: column;
     max-width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {
   .food-menu h2,
-.non-veg-menu h2 {
+.non-veg-menu h2,
+.dessert-menu h2 {
     font-size: 18px;
   }
+}
+
+/***************form styling**********************/
+.form-container .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.form-container .row form {
+  position: relative;
+  margin: 0 20px 20px 20px;
+  margin-top: 15px;
+  border-top: 4px solid red;
+  border-bottom: 4px solid yellow;
+  border-left: 4px solid green;
+  border-right: 4px solid blue;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1dede;
+  font-family: "Acme", cursive;
+  user-select: none;
+}
+.form-container .row form .close-form {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  margin-right: 10px;
+  position: absolute;
+  right: 0;
+}
+.form-container .row form .close-form:hover {
+  transform: scale(1.3, 1.3);
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.form-container .row form h5 {
+  margin-top: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.form-container .row form input {
+  background-color: #f1dede;
+  width: 100%;
+  margin-top: -5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  border: none;
+  border-bottom: 2px solid lightblue;
+}
+.form-container .row form .confirmButtons {
+  text-align: center;
+}
+.form-container .row form .confirmButtons .confirm,
+.form-container .row form .confirmButtons button {
+  font-size: 20px;
+}
+.form-container .row form .confirmButtons button {
+  text-transform: capitalize;
+  margin: 10px 0;
+  outline: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

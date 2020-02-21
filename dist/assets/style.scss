@@ -40,10 +40,12 @@ nav{
 
 /*****Food-Menu Styling******/
 .food-menu,
-.non-veg-menu{
+.non-veg-menu,
+.dessert-menu{
     margin: 20px 0;
 
     h2{
+        display: block;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 30px;
@@ -51,6 +53,7 @@ nav{
         font-family: 'Acme', cursive;
         cursor: pointer;
         user-select: none;
+        padding: 5px 20px;
     }
 
     h2:hover{
@@ -61,6 +64,7 @@ nav{
     .row{
         display: flex;
         align-items: baseline;
+        
         section{
             position: relative;
             max-width: 350px;
@@ -96,7 +100,8 @@ nav{
                 .price{
                     padding-left: 10px;
                 }
-            }
+            }   
+            
         }
 
         @media only screen and (max-width: 768px){
@@ -110,6 +115,75 @@ nav{
     @media only screen and (max-width: 768px){
         h2{
             font-size: 18px;
+        }
+    }
+
+}
+
+
+/***************form styling**********************/
+.form-container{
+    .row{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        form{
+            position: relative;
+            margin: 0 20px 20px 20px;
+            margin-top: 15px;
+            border-top: 4px solid red;
+            border-bottom: 4px solid yellow;
+            border-left: 4px solid green;
+            border-right: 4px solid blue;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(241, 222, 222);
+            font-family: 'Acme', cursive;
+            user-select: none;
+
+            .close-form{
+                background-color: red;
+                color: white;
+                padding: 5px;
+                margin-right: 10px;
+                position: absolute;
+                right: 0;
+            }
+
+            .close-form:hover{
+                transform: scale(1.3, 1.3);
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+
+            h5{
+                margin-top: 10px;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+
+            input{
+                background-color: rgb(241, 222, 222);
+                width: 100%;
+                margin-top: -5px;
+                font-size: 18px;
+                text-transform: capitalize;
+                border: none;
+                border-bottom: 2px solid lightblue;
+            }
+
+            .confirmButtons{
+                text-align: center;
+                .confirm,
+                button{
+                    font-size: 20px;
+                }
+                button{
+                    text-transform: capitalize;
+                    margin: 10px 0;
+                    outline: 0;
+                }
+            }
         }
     }
 }

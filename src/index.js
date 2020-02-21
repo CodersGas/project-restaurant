@@ -17,14 +17,21 @@ menu.addEventListener("click", () =>{
     if(veg_h2.style.display === "none"){
         veg_h2.style.display = "block";
         nonveg_h2.style.display = "block";
+        dessert_h2.style.display = "block";
     }
     else{
         veg_h2.style.display = "none";
         nonveg_h2.style.display = "none";
+        
         vegRow.style.display = "none";
         nonvegRow.style.display = "none";
+        
+        dessert_h2.style.display = "none";
+        dessertRow.style.display = "none";
+
+        formContainer.style.display = "none";
     }
-})
+});
 
 const contact = document.createElement("li");
 contact.innerHTML = "contact";
@@ -52,7 +59,7 @@ foodMenuContainer.classList.add("food-menu");
 
 const veg_h2 = document.createElement("h2");
 veg_h2.style.border = "2px solid lightblue"
-veg_h2.innerHTML = "vegetarian menu";
+veg_h2.innerHTML = "&#127823; vegetarian menu &#127823;";
 veg_h2.style.display = "none";
 foodMenuContainer.appendChild(veg_h2);
 
@@ -191,7 +198,7 @@ nonVegContainer.classList.add("non-veg-menu");
 
 const nonveg_h2 = document.createElement("h2");
 nonveg_h2.style.border = "2px solid lightblue"
-nonveg_h2.innerHTML = "non vegetarian menu";
+nonveg_h2.innerHTML = " &#127831; non vegetarian menu &#127831;";
 nonveg_h2.style.display = "none";
 nonVegContainer.appendChild(nonveg_h2);
 
@@ -323,3 +330,249 @@ nonvegRow.appendChild(nonvegSection3);
 
 boadyTag.appendChild(nonVegContainer);
 
+/******************************DESSERT SECTION*************************/
+const dessertContainer = document.createElement("div");
+dessertContainer.classList.add("container");
+dessertContainer.classList.add("dessert-menu");
+
+const dessert_h2 = document.createElement("h2");
+dessert_h2.style.border = "2px solid lightblue"
+dessert_h2.innerHTML = " &#127854; dessert menu &#127854;";
+dessert_h2.style.display = "none";
+dessertContainer.appendChild(dessert_h2);
+
+const dessertRow = document.createElement("div");
+dessertRow.classList.add("row");
+dessertContainer.appendChild(dessertRow);
+dessertRow.style.display = "none";
+
+
+dessert_h2.addEventListener("click", () =>{
+    if(dessertRow.style.display === "none"){
+        dessertRow.style.display = "flex";
+    }
+    else{
+        dessertRow.style.display = "none";
+    }
+});
+
+/**************section 1**************/
+const dessertSection1 = document.createElement("section");
+dessertSection1.classList.add("items");
+dessertSection1.classList.add("col-md-4");
+
+const dessertsection1Div = document.createElement("div");
+dessertsection1Div.classList.add("img-wrapper");
+const dessertimgWrapperImg1 = document.createElement("img");
+dessertimgWrapperImg1.setAttribute("src", "assets/gulab-jamun.jpg");
+
+dessertsection1Div.appendChild(dessertimgWrapperImg1);
+dessertSection1.appendChild(dessertsection1Div);
+
+const dessertsection1H5 = document.createElement("h5");
+dessertsection1H5.innerHTML = "gulab jamun";
+dessertSection1.appendChild(dessertsection1H5);
+
+const dessertsection1P = document.createElement("p");
+dessertsection1P.classList.add("description");
+dessertsection1P.innerHTML = "Gulab jamun is a milk-solid-based sweet from the Indian subcontinent, popular in India, Nepal, Pakistan, the Maldives, and Bangladesh, as well as Myanmar.";
+dessertSection1.appendChild(dessertsection1P);
+
+const dessertsection1Btn = document.createElement("button");
+dessertsection1Btn.setAttribute("type", "button");
+dessertsection1Btn.classList.add("btn");
+dessertsection1Btn.classList.add("btn-primary");
+dessertsection1Btn.innerHTML = "place order";
+
+const dessertsection1BtnSpan = document.createElement("span");
+dessertsection1BtnSpan.classList.add("price");
+dessertsection1BtnSpan.innerHTML = "&#8377; 120";
+
+dessertsection1Btn.appendChild(dessertsection1BtnSpan);
+dessertSection1.appendChild(dessertsection1Btn);
+
+dessertRow.appendChild(dessertSection1);
+
+/**************section 2**************/
+const dessertSection2 = document.createElement("section");
+dessertSection2.classList.add("items");
+dessertSection2.classList.add("col-md-4");
+
+const dessertsection2Div = document.createElement("div");
+dessertsection2Div.classList.add("img-wrapper");
+const dessertimgWrapperImg2 = document.createElement("img");
+dessertimgWrapperImg2.setAttribute("src", "assets/kheer.jpg");
+
+dessertsection2Div.appendChild(dessertimgWrapperImg2);
+dessertSection2.appendChild(dessertsection2Div);
+
+const dessertsection2H5 = document.createElement("h5");
+dessertsection2H5.innerHTML = "kheer";
+dessertSection2.appendChild(dessertsection2H5);
+
+const dessertsection2P = document.createElement("p");
+dessertsection2P.classList.add("description");
+dessertsection2P.innerHTML = "Kheer or firni is a pudding, originating from the Indian subcontinent, made by boiling milk and sugar with one of the following: rice, broken wheat, tapioca, vermicelli, or sweet corn. It is flavoured with cardamom, raisins, saffron, cashews, pistachios, almonds or other dry fruits and nuts. ";
+dessertSection2.appendChild(dessertsection2P);
+
+const dessertsection2Btn = document.createElement("button");
+dessertsection2Btn.setAttribute("type", "button");
+dessertsection2Btn.classList.add("btn");
+dessertsection2Btn.classList.add("btn-primary");
+dessertsection2Btn.innerHTML = "place order";
+
+const dessertsection2BtnSpan = document.createElement("span");
+dessertsection2BtnSpan.classList.add("price");
+dessertsection2BtnSpan.innerHTML = "&#8377; 250";
+
+dessertsection2Btn.appendChild(dessertsection2BtnSpan);
+dessertSection2.appendChild(dessertsection2Btn);
+
+dessertRow.appendChild(dessertSection2);
+
+/**************section 3**************/
+const dessertSection3 = document.createElement("section");
+dessertSection3.classList.add("items");
+dessertSection3.classList.add("col-md-4");
+
+const dessertsection3Div = document.createElement("div");
+dessertsection3Div.classList.add("img-wrapper");
+const dessertimgWrapperImg3 = document.createElement("img");
+dessertimgWrapperImg3.setAttribute("src", "assets/halwa.jpg");
+
+dessertsection3Div.appendChild(dessertimgWrapperImg3);
+dessertSection3.appendChild(dessertsection3Div);
+
+const dessertsection3H5 = document.createElement("h5");
+dessertsection3H5.innerHTML = "gajar ka halwa";
+dessertSection3.appendChild(dessertsection3H5);
+
+const dessertsection3P = document.createElement("p");
+dessertsection3P.classList.add("description");
+dessertsection3P.innerHTML = "Gajar ka halwa, also known as gajorer halua, Gajrela, Gajar Pak, and Carrot halwa is a carrot-based sweet dessert pudding from the Indian subcontinent. It is made by placing grated carrots in a pot containing a specific amount of water, milk and sugar and then cooking while stirring regularly";
+dessertSection3.appendChild(dessertsection3P);
+
+const dessertsection3Btn = document.createElement("button");
+dessertsection3Btn.setAttribute("type", "button");
+dessertsection3Btn.classList.add("btn");
+dessertsection3Btn.classList.add("btn-primary");
+dessertsection3Btn.innerHTML = "place order";
+
+const dessertsection3BtnSpan = document.createElement("span");
+dessertsection3BtnSpan.classList.add("price");
+dessertsection3BtnSpan.innerHTML = "&#8377; 175";
+
+dessertsection3Btn.appendChild(dessertsection3BtnSpan);
+dessertSection3.appendChild(dessertsection3Btn);
+
+dessertRow.appendChild(dessertSection3);
+boadyTag.appendChild(dessertContainer);
+
+/**********************************CONTACT FORM**********************************/
+const formContainer = document.createElement("div");
+formContainer.classList.add("form-container");
+formContainer.classList.add("container");
+formContainer.style.display = "none";
+
+const formRow = document.createElement("div");
+formRow.classList.add("row");
+formContainer.appendChild(formRow);
+
+const mainForm = document.createElement("form");
+mainForm.classList.add("col-md-12");
+mainForm.classList.add("main-form");
+mainForm.setAttribute("method", "POST");
+formRow.appendChild(mainForm);
+
+const closeBtn = document.createElement("h4");
+closeBtn.classList.add("close-form");
+closeBtn.innerHTML = "X";
+mainForm.appendChild(closeBtn);
+
+closeBtn.addEventListener("click", () =>{
+    if(formCont.style.display === "block"){
+        formCont.style.display = "none";
+    }
+})
+
+const nameEntry = document.createElement("h5");
+nameEntry.innerHTML = "name";
+const nameInput = document.createElement("input");
+nameInput.setAttribute("type", "text");
+nameInput.setAttribute("placeholder", "enter your name");
+mainForm.appendChild(nameEntry);
+mainForm.appendChild(nameInput);
+
+const addressEntry = document.createElement("h5");
+addressEntry.innerHTML = "address";
+const addressInput = document.createElement("input");
+addressInput.setAttribute("type", "text");
+addressInput.setAttribute("placeholder", "enter your address");
+mainForm.appendChild(addressEntry);
+mainForm.appendChild(addressInput);
+
+const numberEntry = document.createElement("h5");
+numberEntry.innerHTML = "number";
+const numberInput = document.createElement("input");
+numberInput.setAttribute("type", "number");
+numberInput.setAttribute("placeholder", "phone number");
+mainForm.appendChild(numberEntry);
+mainForm.appendChild(numberInput);
+
+const dishName = document.createElement("h5");
+dishName.innerHTML = "dish name";
+const dishInput = document.createElement("text");
+dishInput.style.textTransform = "capitalize";
+mainForm.appendChild(dishName);
+mainForm.appendChild(dishInput);
+
+const quantity = document.createElement("h5");
+quantity.innerHTML = "quantity";
+const quantityInput = document.createElement("input");
+quantityInput.setAttribute("type", "number");
+quantityInput.setAttribute("min", "1");
+quantityInput.setAttribute("max", "8")
+quantityInput.value = 1;
+mainForm.appendChild(quantity);
+mainForm.appendChild(quantityInput);
+
+const btnDiv = document.createElement("div");
+btnDiv.classList.add("confirmButtons");
+
+const btnH5 = document.createElement("h5");
+btnH5.classList.add("confirm");
+btnH5.innerHTML = "confirm order";
+btnDiv.appendChild(btnH5);
+
+const yesBtn = document.createElement("button");
+yesBtn.setAttribute("type", "button");
+yesBtn.innerHTML = "yes";
+btnDiv.appendChild(yesBtn);
+
+const noBtn = document.createElement("button");
+noBtn.setAttribute("type", "button");
+noBtn.innerHTML = "no";
+btnDiv.appendChild(noBtn);
+
+mainForm.appendChild(btnDiv);
+
+boadyTag.appendChild(formContainer);
+
+
+/***********functionality for opening order form on clicking place order*************/
+const formCont = document.querySelector(".form-container");
+
+document.querySelectorAll("button").forEach(button =>{
+    if(button.innerHTML.includes("place order")){
+        button.addEventListener("click", () => {
+            if(formCont.style.display === "none"){
+                formCont.style.display = "block";
+                dishInput.innerHTML = button.parentElement.querySelector("h5").innerHTML;
+                button.parentElement.appendChild(formCont);
+            }
+            else{
+                formCont.style.display = "none";
+            }
+        });
+    }
+});
