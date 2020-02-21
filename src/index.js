@@ -622,7 +622,7 @@ document.querySelectorAll("button").forEach(button =>{
 const aboutContainer = document.createElement("div");
 aboutContainer.classList.add("about-section");
 aboutContainer.classList.add("container");
-aboutContainer.style.display = "none";
+aboutContainer.style.display = "block";
 
 const aboutRow = document.createElement("div");
 aboutRow.classList.add("row");
@@ -653,6 +653,7 @@ bodyTag.appendChild(aboutContainer);
 const contactContainer = document.createElement("div");
 contactContainer.classList.add("contact-form");
 contactContainer.classList.add("container");
+contactContainer.style.display = "none";
 
 const contactH3 = document.createElement("h3");
 contactH3.innerHTML = "from parties to functions, we arrange for everything. ring a bell, message or visit us and give us a chance to showcase our hospitality."
@@ -706,3 +707,7 @@ document.querySelector(".contact-email").readOnly = true;
 document.querySelector(".contact-phone1").readOnly = true;
 document.querySelector(".contact-phone2").readOnly = true;
 document.querySelector(".contact-address").readOnly = true;
+
+window.onload = function(){
+    bodyTag.appendChild(aboutContainer);
+}
