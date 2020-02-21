@@ -521,7 +521,7 @@ mainForm.appendChild(numberInput);
 
 const dishName = document.createElement("h5");
 dishName.innerHTML = "dish name";
-const dishInput = document.createElement("text");
+const dishInput = document.createElement("input");
 dishInput.style.textTransform = "capitalize";
 mainForm.appendChild(dishName);
 mainForm.appendChild(dishInput);
